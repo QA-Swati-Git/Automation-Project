@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="0" failed="7" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-30T14:47:04 IST" name="Default suite" finished-at="2022-12-30T14:47:50 IST" duration-ms="45969">
+    <groups>
+    </groups>
+    <test started-at="2022-12-30T14:47:04 IST" name="Default test" finished-at="2022-12-30T14:47:50 IST" duration-ms="45969">
+      <class name="qa.BDO_Web_Test.LoginTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:04 IST" name="setup" finished-at="2022-12-30T14:47:14 IST" duration-ms="10010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="VerifyLoginCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:14 IST" name="VerifyLoginCredentials" data-provider="credentials" finished-at="2022-12-30T14:47:44 IST" duration-ms="30011" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[EmptyUsername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Password@0007]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.microsoft.playwright.TimeoutError">
+            <message>
+              <![CDATA[Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+    at ProgressController.run (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/progress.js:88:26)
+    at Frame.fill (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/frames.js:988:23)
+    at FrameDispatcher.fill (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/frameDispatcher.js:158:30)
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:317:46)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+    at ProgressController.run (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/progress.js:88:26)
+    at Frame.fill (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/frames.js:988:23)
+    at FrameDispatcher.fill (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/frameDispatcher.js:158:30)
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:317:46)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.VerifyLoginCredentials(LoginTestCase.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message='Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+    at ProgressController.run (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/progress.js:88:26)
+    at Frame.fill (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/frames.js:988:23)
+    at FrameDispatcher.fill (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/frameDispatcher.js:158:30)
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:317:46)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginCredentials -->
+        <test-method signature="VerifyLoginCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:44 IST" name="VerifyLoginCredentials" data-provider="credentials" finished-at="2022-12-30T14:47:49 IST" duration-ms="5726" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PasswordEmpty]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBNDB001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='Target closed
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+  name='Error
+  stack='Error: Target closed
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+    at /private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crConnection.js:169:16
+    at new Promise (<anonymous>)
+    at CRSession.send (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crConnection.js:165:12)
+    at CRExecutionContext.evaluateWithArguments (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crExecutionContext.js:78:28)
+    at FrameExecutionContext.evaluateWithArguments (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/javascript.js:61:61)
+    at evaluateExpression (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/javascript.js:215:26)
+    at async InjectedScriptPollHandler.finishHandle (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dom.js:855:22)
+    at async RerunnableTask.rerun (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/frames.js:1557:73)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target closed
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+  name='Error
+  stack='Error: Target closed
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+    at /private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crConnection.js:169:16
+    at new Promise (<anonymous>)
+    at CRSession.send (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crConnection.js:165:12)
+    at CRExecutionContext.evaluateWithArguments (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crExecutionContext.js:78:28)
+    at FrameExecutionContext.evaluateWithArguments (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/javascript.js:61:61)
+    at evaluateExpression (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/javascript.js:215:26)
+    at async InjectedScriptPollHandler.finishHandle (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dom.js:855:22)
+    at async RerunnableTask.rerun (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/frames.js:1557:73)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.VerifyLoginCredentials(LoginTestCase.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target closed
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+  name='Error
+  stack='Error: Target closed
+=========================== logs ===========================
+waiting for locator("input#username")
+============================================================
+    at /private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crConnection.js:169:16
+    at new Promise (<anonymous>)
+    at CRSession.send (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crConnection.js:165:12)
+    at CRExecutionContext.evaluateWithArguments (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/chromium/crExecutionContext.js:78:28)
+    at FrameExecutionContext.evaluateWithArguments (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/javascript.js:61:61)
+    at evaluateExpression (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/javascript.js:215:26)
+    at async InjectedScriptPollHandler.finishHandle (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dom.js:855:22)
+    at async RerunnableTask.rerun (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/frames.js:1557:73)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:201)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginCredentials -->
+        <test-method signature="VerifyLoginCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:49 IST" name="VerifyLoginCredentials" data-provider="credentials" finished-at="2022-12-30T14:47:50 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BothCredentialEmpty]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.VerifyLoginCredentials(LoginTestCase.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:201)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginCredentials -->
+        <test-method signature="VerifyLoginCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:50 IST" name="VerifyLoginCredentials" data-provider="credentials" finished-at="2022-12-30T14:47:50 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[InvalidUsernameandPassword]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBNDB0010]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Password@0007]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.VerifyLoginCredentials(LoginTestCase.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:201)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginCredentials -->
+        <test-method signature="VerifyLoginCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:50 IST" name="VerifyLoginCredentials" data-provider="credentials" finished-at="2022-12-30T14:47:50 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[InvalidPassword]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BBNDB001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Test@20]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.VerifyLoginCredentials(LoginTestCase.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:201)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginCredentials -->
+        <test-method signature="LoginAttemptExhausted()[pri:1, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:50 IST" name="LoginAttemptExhausted" finished-at="2022-12-30T14:47:50 IST" duration-ms="2" status="FAIL">
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.LoginAttemptExhausted(LoginTestCase.java:41)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:201)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAttemptExhausted -->
+        <test-method signature="VaildateSuccessfullogin()[pri:3, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:50 IST" name="VaildateSuccessfullogin" finished-at="2022-12-30T14:47:50 IST" duration-ms="2" status="FAIL">
+          <exception class="com.microsoft.playwright.PlaywrightException">
+            <message>
+              <![CDATA[Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:339)
+at com.microsoft.playwright.impl.FrameImpl.lambda$fill$15(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:329)
+at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:182)
+at com.microsoft.playwright.Locator.fill(Locator.java:2473)
+at qa.BDO_Web.Pages.BDO_Login.logintoApp(BDO_Login.java:38)
+at qa.BDO_Web_Test.LoginTestCase.VaildateSuccessfullogin(LoginTestCase.java:124)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message='Target page, context or browser has been closed
+  name='Error
+  stack='Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/server/dispatchers/dispatcher.js:230:49)
+    at PipeTransport.transport.onmessage (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/cli/driver.js:50:57)
+    at Immediate._onImmediate (/private/var/folders/70/x874lf6n7cx_4tkvkkcwsmhh0000gr/T/playwright-java-17388969528115350112/package/lib/protocol/transport.js:77:34)
+    at processImmediate (node:internal/timers:466:21)
+}
+at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:201)
+at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+... 41 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.microsoft.playwright.PlaywrightException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VaildateSuccessfullogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:qa.BDO_Web_Test.LoginTestCase@611889f4]" started-at="2022-12-30T14:47:50 IST" name="tearDown" finished-at="2022-12-30T14:47:50 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- qa.BDO_Web_Test.LoginTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
