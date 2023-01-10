@@ -48,16 +48,15 @@ public class BDO_Login{
 		String InlineErrorusername = page.locator("//*[@id=\"username-validation-msg\"]").textContent();
 		System.out.println("Inline_error:" +  InlineErrorusername);
 		
-		return InlineErrorusername;
-				
+		return InlineErrorusername;				
 		
 	}
 	
-public String  Loginwithemptypassword()
+   
+	public String  Loginwithemptypassword()
 	
 	{
 	 
-	 	
 	    String InlineErrorpassword = page.locator("//*[@id=\"password-validation-msg\"]").textContent();
 	    System.out.println("Inline_error:" +  InlineErrorpassword);
 		return InlineErrorpassword;
@@ -65,25 +64,22 @@ public String  Loginwithemptypassword()
 		
 	}
 	
-public String  Loginwithbothempty()
+    public String  Loginwithbothempty()
 
-{
- 
-	
+{	
 	String InlineErrorusername = page.locator("//*[@id=\"username-validation-msg\"]").textContent();
     String InlineErrorpassword = page.locator("//*[@id=\"password-validation-msg\"]").textContent();
     String BothinlineErros = (InlineErrorusername + ' '+ "and" + ' '+ InlineErrorpassword);
     System.out.println("Inline_error:" +  InlineErrorusername + ' ' + "," + ' '+ InlineErrorpassword);
 
-	return BothinlineErros;
-			
+	return BothinlineErros;			
 	
 }
-public String  LoginwithInvalidUsernameandPassword()
+    
+    
+   public String  LoginwithInvalidUsernameandPassword()
 
-{
- 
-	
+{	
 	String BDOLoginErroronHeader = page.locator("//*[@id=\"ss-error-msg\"]/div/div/div[2]/label").textContent();
     System.out.println("The Header_error is :" +  BDOLoginErroronHeader);
     boolean Icon= page.locator("//*[@id=\"ss-error-msg\"]/div/div/div[1]/span").isVisible();
@@ -94,11 +90,9 @@ public String  LoginwithInvalidUsernameandPassword()
 	
 
 
-public String  Loginaftersessionisexpired()
+   public String  Loginaftersessionisexpired()
 
-{
- 
-	
+{	
 	String BDOLoginErroronHeader = page.locator("//*[@id=\"ss-error-msg\"]/div/div/div[2]/label").textContent();
     System.out.println("The error when user click Login, after session out:" +  BDOLoginErroronHeader);
     boolean Icon= page.locator("//*[@id=\"ss-error-msg\"]/div/div/div[1]/span").isVisible();
@@ -109,10 +103,9 @@ public String  Loginaftersessionisexpired()
 }
 	
 
-public String  LoginwhenAttemptsExhausted()
+   public String  LoginwhenAttemptsExhausted()
 
-{
- 	
+{ 	
 	String BDOLoginErroronHeader1 = page.locator("//*[@id=\"ss-error-msg\"]/div/div/div[2]/label").textContent();
     System.out.println("The Header_error:" +  BDOLoginErroronHeader1);
     boolean Icon= page.locator("//*[@id=\"ss-error-msg\"]/div/div/div[1]/span").isVisible();
@@ -121,7 +114,9 @@ public String  LoginwhenAttemptsExhausted()
 	return BDOLoginErroronHeader1;
 }
 
-public String ValidateLoginSuccess()
+   
+   
+   public String ValidateLoginSuccess()
 {
 	
     String PageHeader = page.locator("div.user-context-menu-info__name:has-text('BBNDB001')").textContent();
@@ -130,7 +125,8 @@ public String ValidateLoginSuccess()
 	
 }
 
-public void EnterOTP()
+
+   public void EnterOTP()
 {
 	
     page.locator("text=Try another method").first().click();

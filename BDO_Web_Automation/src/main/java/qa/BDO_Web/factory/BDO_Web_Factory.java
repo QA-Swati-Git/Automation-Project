@@ -3,7 +3,6 @@ package qa.BDO_Web.factory;
 import java.util.HashMap;
 import java.util.Map;
 
-
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
 import com.microsoft.playwright.Browser;
@@ -12,6 +11,7 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.Route;
 
 public class BDO_Web_Factory {
 	
@@ -52,11 +52,14 @@ public class BDO_Web_Factory {
 				
 		} 
 		
-		brContext = browser.newContext(new Browser.NewContextOptions().setViewportSize(1750,1080));
-		page= brContext.newPage();
-		page.navigate("https://app.tst.bdo.live.backbaseservices.com/retail-app/redirect");
-		
-
+		brContext = browser.newContext(new Browser.NewContextOptions().setViewportSize(1750,1080)); 
+		page= brContext.newPage();	
+		String url = "https://app.tst.bdo.live.backbaseservices.com/retail-app/redirect";
+		navigateToURL(url);
+	   
+	    
+	   
+	    
 		Map<String,String> headers= new HashMap<>();
 		headers.put("Content-Type", "application/x-www-form-urlencoded");
 		headers.put("Authorization", "Basic WFBPQXY3aVk3TWFjUXhvTXFxSXFrVWZTazhjU2ZDeWg6Mld0QTk1cDNwbVI2eEJCdA==");
@@ -72,6 +75,24 @@ public class BDO_Web_Factory {
 		
 		
 		return page;
+	}
+	
+	
+	private void navigateToURL(String url) 
+	{
+		this.addExtraHeaders();
+        this.page.navigate(url);
+		
+	}
+
+
+	private void addExtraHeaders() {
+		      this.page.route("**/*", route -> {
+			  Map<String, String> headers1 = new HashMap<>(route.request().headers());
+			  headers1.put("X-BDO-BAAS", "bdo-tst-73110ba9-7470-45f2-ada4-e64d1d228390"); 
+			  route.resume(new Route.ResumeOptions().setHeaders(headers1));
+			});
+		
 	}
 
 }

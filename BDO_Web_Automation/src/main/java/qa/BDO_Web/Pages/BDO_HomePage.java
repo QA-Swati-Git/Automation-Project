@@ -20,7 +20,7 @@ public class BDO_HomePage {
 			
 			
 	
-	
+	/*
 	//page Constructor
 	public BDO_HomePage(Page page)
 	{
@@ -70,6 +70,6 @@ public class BDO_HomePage {
 		
 		
 	}
-	
+	*/
 	
 }

@@ -121,32 +121,13 @@ public void VaildateSuccessfullogin()
 {
 		
 	System.out.println("\nTC:06 The expected Username on successful login attempt:\n");
-	login.logintoApp("BBNDB001","Password@0007");
+	login.logintoApp("BBNDB001","Password@1");
 	login.EnterOTP();
 	String ErroronHeader9 = login.ValidateLoginSuccess();
 	System.out.println("The username displayed:" + ErroronHeader9);
 }
 
-/*
-@Test
-public void ValidateLoginafterSessionOut()
-{
-	String SessionoutError ="Please log in again. For your security, we have logged you out due to inactivity or due to login from another device.";
-	
-	System.out.println("\nTC:007 The expected error when user login after session out:\n");
-    
-	//login("BBNDB001", "Test@2022");
-	//page.setDefaultTimeout(500000);
-	page.waitForTimeout(500000);
-	page.locator("input#username").fill("BBNDB007");
-	page.locator("input#password").fill("Password@1000");
-	page.locator("input[name=login]").click();
-	
-	String ErroronHeader10 = login.Loginaftersessionisexpired();
-	
-	Assert.assertEquals(ErroronHeader10, SessionoutError);
-}
-*/
+
 	@AfterTest
 
 	public void tearDown()
