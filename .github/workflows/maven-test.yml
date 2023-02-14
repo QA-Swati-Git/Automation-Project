@@ -5,7 +5,7 @@ on:
       env:
         description: 'Choose Repo Branch:'
         required: true
-        default: 'develop'
+        default: 'master'
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
     - name: Install Playwright
       run: mvn --file BDO_Web_Automation/pom.xml exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
     - name: Run tests
-      run: mvn --file BDO_Web_Automation/pom.xml test
+      run: mvn --file BDO_Web_Automation/pom.xml -Dtest=MyTest -DargLine="-Dplaywright.browsers=chromium" -e -Dheadless=false
     - name: List the current directory
       run: ls -a
     - name: Check the target folder
