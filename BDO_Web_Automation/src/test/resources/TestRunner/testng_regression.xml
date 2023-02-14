@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="BDO_Web_Regression_suite" verbose="4">
+
+
+<test name="BDO_Homepage_Testcase">
+   <classes> 
+<class name="com.BDO_Web_Test.HomePageTestCase"/>
+  </classes>
+  </test> 
+  
+  <test name="BDO_Login_Testcase">
+   <classes> 
+ <class name="com.BDO_Web_Test.LoginTestCase"/>
+  </classes>
+  </test> 
+  
+   <test name="BDO_MyAccountSummary_Testcase">
+   <classes> 
+ <class name="com.BDO_Web_Test.ManageProfileTestCase"/>
+  </classes>
+  </test> 
+  
+  <test name="BDO_ManageProfile_Testcase">
+   <classes> 
+ <class name="com.qa.BDO.Test.BDO_ManageProfile_Testcases"/>
+  </classes>
+  </test> 
+  
+</suite> <!-- Suite -->
